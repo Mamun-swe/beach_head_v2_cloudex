@@ -221,7 +221,7 @@
                         </div>
 
 
-                        <button type="submit" class="btn btn-info shadow-none text-white float-right px-5"><b>SUBMIT</b></button>
+                        <button type="submit" class="btn btn-info uniq-btn shadow-none text-white float-right px-5"><b>GET RESULT</b></button>
 
 
 

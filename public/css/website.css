@@ -13,6 +13,15 @@ body {
     font-size: 13px;
 }
 
+.uniq-btn {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: #1696e7;
+    padding: 8px 40px;
+}
+
 
 /* Marketing */
 
