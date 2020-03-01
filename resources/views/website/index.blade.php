@@ -245,7 +245,7 @@
                 <div class="card-body">
                     <p class="mb-4">Let us help you reach your business goals. Outside your office to reach your customers. We are a Malaysian based company with a global team.</p>
                     <div class="d-flex">
-                        <div><img src="../static/cropped-Tiger-logo.png" class="img-fluid"></div>
+                        <div><img src="{{url('public')}}/static/cropped-Tiger-logo.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
                             <a target="_blank" href="" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
                         </div>
@@ -256,7 +256,7 @@
                 <div class="card-body">
                     <p class="mb-4">Not sure of what online media to allocate your limited budget resources for the biggest impact? Let us help you get the most optimum reach for your budget.</p>
                     <div class="d-flex">
-                        <div><img src="../static/sspng.png" class="img-fluid"></div>
+                        <div><img src="{{url('public')}}/static/sspng.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
                             <a target="_blank" href="" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
                         </div>
@@ -267,7 +267,7 @@
                 <div class="card-body">
                     <p class="mb-4">Not sure of what online media to allocate your limited budget resources for the biggest impact? Let us help you get the most optimum reach for your budget.</p>
                     <div class="d-flex">
-                        <div><img src="../static/ss.jpg" class="img-fluid"></div>
+                        <div><img src="{{url('public')}}/static/ss.jpg" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
                             <a target="_blank" href="https://www.webcloudex.com/" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
                         </div>

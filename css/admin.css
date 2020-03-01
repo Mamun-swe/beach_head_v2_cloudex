@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+.admin a {
+    text-decoration: none;
+}
+
+.create .uniq-btn {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: #1696e7;
+    padding: 8px 40px;
+}
+
+.create .btn {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.index table thead {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.show {
+    font-family: 'Open Sans', sans-serif;
+}
