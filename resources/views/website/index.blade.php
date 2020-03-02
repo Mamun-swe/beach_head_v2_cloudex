@@ -282,6 +282,14 @@
     </div>
 </div>
 
+
+<!-- Widge code -->
+<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kurien75"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:19px !important;">Buy me a coffee</span></a>
+
+
+
+
+
 <script>
     $(".select").select2();
     $(document).ready(function(){
@@ -352,12 +360,6 @@
                 });
             }
         });
-
-
-
-
-
-
 
         $('#advisor').change(function(){
             // Overseas City
@@ -530,4 +532,5 @@
 
     });
 </script>
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kurien75" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#5F7FFF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
 @endsection

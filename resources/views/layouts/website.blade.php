@@ -23,6 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/website.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arial" rel="stylesheet">
 </head>
 <body>
     <div id="app">
