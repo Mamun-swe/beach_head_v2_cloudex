@@ -38,7 +38,7 @@ class SiteController extends Controller
                 'sector_1',
                 'sector_2',
                 'sector_3'
-                )->where('region', '=', 'nz')->get();
+                )->get();
         $collection = collect($exp);
         $data = $collection->unique(
                 'advisory_exp_1',
@@ -96,7 +96,7 @@ class SiteController extends Controller
             'sector_1',
             'sector_2',
             'sector_3'
-            )->where('region', '!=', 'nz')->get();
+            )->get();
         $collection = collect($exp);
         $data = $collection->unique(
                 'advisory_exp_1',
