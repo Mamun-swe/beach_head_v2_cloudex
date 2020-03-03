@@ -240,24 +240,11 @@
                                 </div>
                             </div>
                         </div>
-
-
                         <button type="submit" class="btn btn-info uniq-btn shadow-none text-white float-right px-5"><b>GET RESULT</b></button>
-
-
-
-
-
-
-
                     </form>
                 </div>
             </div>
         </div>
-
-
-
-
 
 
         <!-- Extra -->
@@ -422,13 +409,29 @@
                         $.each(response, function (index, value) {
                             $('#region').append('<option value="' + value.region + '">' + value.region + '</option>');
                         });
-                        // ov_city
-                        $('#ov_city').empty();
-                        $('#ov_city').append(' <option selected disabled value="">Select a city</option>');
-                        $.each(response, function (index, value) {
-                            $('#ov_city').append('<option value="' + value.city + '">' + value.city + '</option>');
-                        });
                     }
+                });
+
+                $('#region').change(function(){
+                    var ovData = {
+                        region: $('#region').val()
+                    }
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': '{{csrf_token()}}'
+                        },
+                        type : 'POST',
+                        data: ovData,
+                        url:"{{route('overseas.city')}}",
+                        success : function(response) {
+                            // ov_city
+                            $('#ov_city').empty();
+                            $('#ov_city').append(' <option selected disabled value="">Select a city</option>');
+                            $.each(response, function (index, value) {
+                                $('#ov_city').append('<option value="' + value.city + '">' + value.city + '</option>');
+                            });
+                        }
+                    });
                 });
 
                 $.ajax({

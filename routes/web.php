@@ -22,6 +22,7 @@ Route::post('/nzdata', 'website\SiteController@nzRegionCity')->name('region.nz')
 Route::get('/nzexp', 'website\SiteController@nzRegionExpData')->name('region.nz.exp');
 
 Route::post('/ovdata', 'website\SiteController@overseasRegionData')->name('region.overseas');
+Route::post('/ovcity', 'website\SiteController@overseasCity')->name('overseas.city');
 Route::get('/ovexp', 'website\SiteController@overseasRegionExp')->name('region.overseas.exp');
 
 Route::post('/result', 'website\ResultController@findResult')->name('result');
