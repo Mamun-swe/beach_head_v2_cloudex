@@ -63,6 +63,7 @@ class ResultController extends Controller
                 "sector_exp_2" => "required",
                 "sector_exp_3" => "required"
             ]);
+            
             $data = Member::where('region', $request->region)
                     ->where('city', $request->ov_city)
                     ->where('advisory_exp_1', $request->adv_exp_1)

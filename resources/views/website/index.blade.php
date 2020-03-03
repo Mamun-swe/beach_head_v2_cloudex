@@ -1,6 +1,27 @@
 @extends('layouts.website')
 @section('content')
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header_top" style="    background: #fff;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 2px;">
+                <p style="
+    text-align: center;
+  
+   ">New Zealand Trade and Enterprise (NZTE) vetted Beachheads advisors are a network of private sector experts who offer perspective and insights to help customers shape the direction of their business in exports and local knowledge.</p>
+                <p style="
+    text-align: center;
+  
+    ">Located throughout New Zealand and around the world, the Beachheads advisors have experience in running international businesses and can help you with specific challenges and maximise opportunities.</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
