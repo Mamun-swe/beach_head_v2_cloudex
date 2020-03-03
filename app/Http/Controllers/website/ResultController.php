@@ -10,18 +10,6 @@ class ResultController extends Controller
 {
     public function findResult(Request $request){
         if($request->advisor === 'nz'){
-            $request->validate([
-                "region" => "required",
-                "adv_exp_1" => "required",
-                "adv_exp_2" => "required",
-                "adv_exp_3" => "required",
-                "market_exp_1" => "required",
-                "market_exp_2" => "required",
-                "market_exp_3" => "required",
-                "sector_exp_1" => "required",
-                "sector_exp_2" => "required",
-                "sector_exp_3" => "required"
-            ]);
             $data = Member::where('region', '=', 'nz')
                     ->where('advisory_exp_1', $request->adv_exp_1)
                     ->where('advisory_exp_2', $request->adv_exp_2)
@@ -50,20 +38,7 @@ class ResultController extends Controller
 
 
         if($request->advisor === 'overseas'){
-            $request->validate([
-                "region" => "required",
-                "ov_city" => "required",
-                "adv_exp_1" => "required",
-                "adv_exp_2" => "required",
-                "adv_exp_3" => "required",
-                "market_exp_1" => "required",
-                "market_exp_2" => "required",
-                "market_exp_3" => "required",
-                "sector_exp_1" => "required",
-                "sector_exp_2" => "required",
-                "sector_exp_3" => "required"
-            ]);
-            
+         
             $data = Member::where('region', $request->region)
                     ->where('city', $request->ov_city)
                     ->where('advisory_exp_1', $request->adv_exp_1)
