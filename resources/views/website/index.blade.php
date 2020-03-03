@@ -308,57 +308,70 @@
                 $.each(response, function (index, value) {
                     $('#region').append('<option value="' + value.city + '">' + value.city + '</option>');
                 });
-                // Adv Exp
-                $('#adv_exp_1').empty();
-                $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
-                });
-                $('#adv_exp_2').empty();
-                $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
-                });
-                $('#adv_exp_3').empty();
-                $('#adv_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
-                });
-
-                // Market Exp
-                $('#market_exp_1').empty();
-                $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
-                });
-                $('#market_exp_2').empty();
-                $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
-                });
-                $('#market_exp_3').empty();
-                $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
-                });
-
-                // Sector Exp
-                $('#sector_exp_1').empty();
-                $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
-                });
-                $('#sector_exp_2').empty();
-                $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
-                });
-                $('#sector_exp_3').empty();
-                $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
-                    $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
-                });
             }
+        });
+
+        // NZ Exp data
+        $('#region').change(function(){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{csrf_token()}}'
+                },
+                type : 'GET',
+                url:"{{route('region.nz.exp')}}",
+                success : function(response) {
+                    // Adv Exp
+                    $('#adv_exp_1').empty();
+                    $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
+                    });
+                    $('#adv_exp_2').empty();
+                    $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
+                    });
+                    $('#adv_exp_3').empty();
+                    $('#adv_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
+                    });
+
+                    // Market Exp
+                    $('#market_exp_1').empty();
+                    $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
+                    });
+                    $('#market_exp_2').empty();
+                    $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
+                    });
+                    $('#market_exp_3').empty();
+                    $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
+                    });
+
+                    // Sector Exp
+                    $('#sector_exp_1').empty();
+                    $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
+                    });
+                    $('#sector_exp_2').empty();
+                    $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
+                    });
+                    $('#sector_exp_3').empty();
+                    $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
+                    });
+                }
+            });
         });
 
         $('#advisor').change(function(){
@@ -383,7 +396,6 @@
                     type : 'POST',
                     url:"{{route('region.overseas')}}",
                     success : function(response) {
-                        console.log(response);
                         $('#region').empty();
                         $('#region').append(' <option selected disabled value="">Select a Region</option>');
                         $.each(response, function (index, value) {
@@ -395,6 +407,16 @@
                         $.each(response, function (index, value) {
                             $('#ov_city').append('<option value="' + value.city + '">' + value.city + '</option>');
                         });
+                    }
+                });
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': '{{csrf_token()}}'
+                    },
+                    type : 'GET',
+                    url:"{{route('region.overseas.exp')}}",
+                    success : function(response) {
                         // Adv Exp
                         $('#adv_exp_1').empty();
                         $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
@@ -447,6 +469,8 @@
                         });
                     }
                 });
+                
+
             }else{
                 $("#overseas_city").hide();
                 $('#region').empty();
@@ -473,57 +497,70 @@
                         $.each(response, function (index, value) {
                             $('#region').append('<option value="' + value.city + '">' + value.city + '</option>');
                         });
-                        // Adv Exp
-                        $('#adv_exp_1').empty();
-                        $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
-                        });
-                        $('#adv_exp_2').empty();
-                        $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
-                        });
-                        $('#adv_exp_3').empty();
-                        $('#adv_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
-                        });
-
-                        // Market Exp
-                        $('#market_exp_1').empty();
-                        $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
-                        });
-                        $('#market_exp_2').empty();
-                        $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
-                        });
-                        $('#market_exp_3').empty();
-                        $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
-                        });
-
-                        // Sector Exp
-                        $('#sector_exp_1').empty();
-                        $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
-                        });
-                        $('#sector_exp_2').empty();
-                        $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
-                        });
-                        $('#sector_exp_3').empty();
-                        $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                        $.each(response, function (index, value) {
-                            $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
-                        });
                     }
+                });
+
+                // NZ Exp data
+                $('#region').change(function(){
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': '{{csrf_token()}}'
+                        },
+                        type : 'GET',
+                        url:"{{route('region.nz.exp')}}",
+                        success : function(response) {
+                            // Adv Exp
+                            $('#adv_exp_1').empty();
+                            $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
+                            });
+                            $('#adv_exp_2').empty();
+                            $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
+                            });
+                            $('#adv_exp_3').empty();
+                            $('#adv_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
+                            });
+
+                            // Market Exp
+                            $('#market_exp_1').empty();
+                            $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
+                            });
+                            $('#market_exp_2').empty();
+                            $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
+                            });
+                            $('#market_exp_3').empty();
+                            $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
+                            });
+
+                            // Sector Exp
+                            $('#sector_exp_1').empty();
+                            $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
+                            });
+                            $('#sector_exp_2').empty();
+                            $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
+                            });
+                            $('#sector_exp_3').empty();
+                            $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                            $.each(response, function (index, value) {
+                                $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
+                            });
+                        }
+                    });
                 });
             }
         });

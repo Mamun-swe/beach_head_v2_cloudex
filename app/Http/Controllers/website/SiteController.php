@@ -12,9 +12,10 @@ class SiteController extends Controller
         return view('website.index');
     }
 
-    public function nzRegionData(Request $request){
+    public function nzRegionCity(Request $request){
         // $data = Member::where('region', "=", "nz")->get();
-        $datax = Member::where('region', "=", "nz")->get();
+        $datax = Member::select('city')
+                ->where('region', "=", "nz")->get();
         $collection = collect($datax);
         $data = $collection->unique('city');
         $data->values()->all();
@@ -26,10 +27,74 @@ class SiteController extends Controller
         }
     }
 
+    public function nzRegionExpData(){
+        $exp = Member::select(
+                'advisory_exp_1',
+                'advisory_exp_2',
+                'advisory_exp_3',
+                'mrkets_1',
+                'mrkets_2',
+                'mrkets_3',
+                'sector_1',
+                'sector_2',
+                'sector_3'
+                )->where('region', '=', 'nz')->get();
+        $collection = collect($exp);
+        $data = $collection->unique(
+                'advisory_exp_1',
+                'advisory_exp_2',
+                'advisory_exp_3',
+                'mrkets_1',
+                'mrkets_2',
+                'mrkets_3',
+                'sector_1',
+                'sector_2',
+                'sector_3'
+        );
+        $data->values()->all();
+        if($data){
+            return response()->json($data);
+        }else{
+            return response()->json('not found');
+        }
+    }
+
     public function overseasRegionData(Request $request){
-        $datay = Member::where('region', "!=", "nz")->get();
+        $datay = Member::select('region', 'city')->where('region', "!=", "nz")->get();
         $collection = collect($datay);
         $data = $collection->unique('region', 'city');
+        $data->values()->all();
+        if($data){
+            return response()->json($data);
+        }else{
+            return response()->json('not found');
+        }
+    }
+
+    public function overseasRegionExp(){
+        $exp = Member::select(
+            'advisory_exp_1',
+            'advisory_exp_2',
+            'advisory_exp_3',
+            'mrkets_1',
+            'mrkets_2',
+            'mrkets_3',
+            'sector_1',
+            'sector_2',
+            'sector_3'
+            )->where('region', '!=', 'nz')->get();
+        $collection = collect($exp);
+        $data = $collection->unique(
+                'advisory_exp_1',
+                'advisory_exp_2',
+                'advisory_exp_3',
+                'mrkets_1',
+                'mrkets_2',
+                'mrkets_3',
+                'sector_1',
+                'sector_2',
+                'sector_3'
+        );
         $data->values()->all();
         if($data){
             return response()->json($data);

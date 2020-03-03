@@ -18,8 +18,11 @@ Route::post('/password/update', 'website\PasswordController@update')->name('pass
 
 
 Route::get('/', 'website\SiteController@index')->name('website.index');
-Route::post('/nzdata', 'website\SiteController@nzRegionData')->name('region.nz');
+Route::post('/nzdata', 'website\SiteController@nzRegionCity')->name('region.nz');
+Route::get('/nzexp', 'website\SiteController@nzRegionExpData')->name('region.nz.exp');
+
 Route::post('/ovdata', 'website\SiteController@overseasRegionData')->name('region.overseas');
+Route::get('/ovexp', 'website\SiteController@overseasRegionExp')->name('region.overseas.exp');
 
 Route::post('/result', 'website\ResultController@findResult')->name('result');
 // nps
