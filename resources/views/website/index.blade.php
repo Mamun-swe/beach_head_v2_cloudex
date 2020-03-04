@@ -54,9 +54,6 @@
                             </div>
                             <div class="col-12 col-lg-7 mb-lg-2">
                                 <div class="form-group">
-                                    <!-- @error('region')
-                                        <small class="text-danger">This field is required .</small>
-                                    @enderror -->
                                     <select name="region" id="region" class="form-control shadow-none">
                                     </select>
                                 </div>
@@ -70,9 +67,6 @@
                             </div>
                             <div class="col-12 col-lg-7 mb-lg-2">
                                 <div class="form-group">
-                                    <!-- @error('ov_city')
-                                        <small class="text-danger">This field is required .</small>
-                                    @enderror -->
                                     <select name="ov_city" id="ov_city" class="form-control shadow-none">
                                     </select>
                                 </div>
@@ -93,21 +87,12 @@
                                 <p class="text-dark mb-1">Type & select Advisory expertise you want (upto 3)</p>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('adv_exp_1')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="adv_exp_1" id="adv_exp_1" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('adv_exp_2')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="adv_exp_2" id="adv_exp_2" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('adv_exp_3')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="adv_exp_3" id="adv_exp_3" class="form-control shadow-none select"></select>
                             </div>
                         </div>
@@ -118,21 +103,12 @@
                                 <p class="text-dark mb-1">Type & select Market expertise you want (upto 3)</p>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('market_exp_1')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="market_exp_1" id="market_exp_1" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('market_exp_2')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="market_exp_2" id="market_exp_2" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('market_exp_3')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="market_exp_3" id="market_exp_3" class="form-control shadow-none select"></select>
                             </div>
                         </div>
@@ -143,21 +119,12 @@
                                 <p class="text-dark mb-1">Type & select Sector expertise you want (upto 3)</p>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('sector_exp_1')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="sector_exp_1" id="sector_exp_1" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('sector_exp_2')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="sector_exp_2" id="sector_exp_2" class="form-control shadow-none select"></select>
                             </div>
                             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                                <!-- @error('sector_exp_2')
-                                    <small class="text-danger">This field is required .</small>
-                                @enderror -->
                                 <select name="sector_exp_3" id="sector_exp_3" class="form-control shadow-none select"></select>
                             </div>
                         </div>

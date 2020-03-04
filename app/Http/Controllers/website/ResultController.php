@@ -11,6 +11,7 @@ class ResultController extends Controller
     public function findResult(Request $request){
         if($request->advisor === 'nz'){
             $data = Member::where('region', '=', 'nz')
+                    ->where('city', $request->region)
                     ->where('advisory_exp_1', $request->adv_exp_1)
                     ->where('advisory_exp_2', $request->adv_exp_2)
                     ->where('advisory_exp_3', $request->adv_exp_3)
@@ -30,7 +31,18 @@ class ResultController extends Controller
                 return view('website.result', compact('data'));
             }else{
                 $data = Member::where('region', '=', 'nz')
-                    ->take(5)
+                        ->where('city', $request->region)
+                        ->where(function($q) use ($request){
+                            $q->orWhere('advisory_exp_1', $request->adv_exp_1);
+                            $q->orWhere('advisory_exp_2', $request->adv_exp_2);
+                            $q->orWhere('advisory_exp_3', $request->adv_exp_3);
+                            $q->orWhere('mrkets_1', $request->market_exp_1);
+                            $q->orWhere('mrkets_2', $request->market_exp_2);
+                            $q->orWhere('mrkets_3', $request->market_exp_3);
+                            $q->orWhere('sector_1', $request->sector_exp_1);
+                            $q->orWhere('sector_2', $request->sector_exp_2);
+                            $q->orWhere('sector_3', $request->sector_exp_3);
+                        })
                     ->get();
                 return view('website.result', compact('data'));
             }
@@ -61,6 +73,17 @@ class ResultController extends Controller
             }else{
                 $data = Member::where('region', $request->region)
                     ->where('city', $request->ov_city)
+                    ->where(function($q) use ($request){
+                        $q->orWhere('advisory_exp_1', $request->adv_exp_1);
+                        $q->orWhere('advisory_exp_2', $request->adv_exp_2);
+                        $q->orWhere('advisory_exp_3', $request->adv_exp_3);
+                        $q->orWhere('mrkets_1', $request->market_exp_1);
+                        $q->orWhere('mrkets_2', $request->market_exp_2);
+                        $q->orWhere('mrkets_3', $request->market_exp_3);
+                        $q->orWhere('sector_1', $request->sector_exp_1);
+                        $q->orWhere('sector_2', $request->sector_exp_2);
+                        $q->orWhere('sector_3', $request->sector_exp_3);
+                    })
                     ->take(5)
                     ->get();
                 return view('website.result', compact('data'));
