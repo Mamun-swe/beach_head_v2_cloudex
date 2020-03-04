@@ -41,6 +41,13 @@ class SiteController extends Controller
         }
     }
 
+    // Advertise Exp 1 or Overseas City
+    
+
+
+
+
+
     // NZ Adv Exp
     public function nzAdvExp1(Request $request){
         $exp = Member::select('advisory_exp_1')

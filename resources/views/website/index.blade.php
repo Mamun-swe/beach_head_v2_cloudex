@@ -275,7 +275,7 @@
                 'X-CSRF-TOKEN': '{{csrf_token()}}'
             },
             type : 'POST',
-            url:"{{route('region.nz')}}",
+            url:"{{route('region')}}",
             data: {advisor},
             success : function(response) {
                 $('#region').empty();
@@ -295,7 +295,7 @@
                 'X-CSRF-TOKEN': '{{csrf_token()}}'
             },
             type : 'POST',
-            url:"{{route('region.nz')}}",
+            url:"{{route('region')}}",
             data: exp,
             success : function(response) {
                 $('#region').empty();
@@ -309,9 +309,15 @@
 
     $('#region').change(function(){
         if(advisor == 'nz'){
-            console.log('nz')
+            var data = {
+                region: 'nz'
+            }
+            console.log(data);
         }else{
-            console.log('overseas');
+            var data = {
+                region: $('#region').val()
+            }
+            console.log(data);
         }
     });
 

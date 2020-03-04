@@ -18,7 +18,7 @@ Route::post('/password/update', 'website\PasswordController@update')->name('pass
 
 
 Route::get('/', 'website\SiteController@index')->name('website.index');
-Route::post('/nzdata', 'website\SiteController@nzRegionCity')->name('region.nz');
+Route::post('/nzdata', 'website\SiteController@nzRegionCity')->name('region');
 
 // NZ Advertise Exp
 Route::post('/nzadvexp1', 'website\SiteController@nzAdvExp1')->name('region.nz.adv.exp1');
