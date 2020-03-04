@@ -42,7 +42,12 @@ class ResultController extends Controller
                             $q->orWhere('sector_1', $request->sector_exp_1);
                             $q->orWhere('sector_2', $request->sector_exp_2);
                             $q->orWhere('sector_3', $request->sector_exp_3);
+                            $q->orWhere('founder_ceo_exp', $request->ceo);
+                            $q->orWhere('govt_regulatory_exp', $request->govt_exp);
+                            $q->orWhere('years_of_experience', $request->exp_year);
+                            $q->orWhere('nz_working_experience', $request->nz_work_exp);
                         })
+                        ->take(5)
                     ->get();
                 return view('website.result', compact('data'));
             }
@@ -83,6 +88,10 @@ class ResultController extends Controller
                         $q->orWhere('sector_1', $request->sector_exp_1);
                         $q->orWhere('sector_2', $request->sector_exp_2);
                         $q->orWhere('sector_3', $request->sector_exp_3);
+                        $q->orWhere('founder_ceo_exp', $request->ceo);
+                        $q->orWhere('govt_regulatory_exp', $request->govt_exp);
+                        $q->orWhere('years_of_experience', $request->exp_year);
+                        $q->orWhere('nz_working_experience', $request->nz_work_exp);
                     })
                     ->take(5)
                     ->get();
