@@ -62,11 +62,7 @@
                             <p class="text-muted mb-2">Beach Head Advisor Region</p>
                             @foreach ($data as $item)
 							@if($item == $data->first())
-								@if ($item->region != 'nz')
-                                <h5 class="mb-3 border text-capitalize text-center py-2">Overseas</h5>
-								@else
-                                    <h5 class="mb-3 border text-uppercase text-center py-2">{{$item->region}}</h5>
-								@endif
+                                <h5 class="mb-3 border text-capitalize text-center py-2">{{$item->region}}</h5>
 							@endif
 							@endforeach
                             

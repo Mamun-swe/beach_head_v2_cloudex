@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class ResultController extends Controller
 {
     public function findResult(Request $request){
+        // dd($request->all());
         if($request->advisor === 'nz'){
             $data = Member::where('region', '=', 'nz')
                     ->where('city', $request->region)

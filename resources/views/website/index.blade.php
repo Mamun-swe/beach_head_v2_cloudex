@@ -3,22 +3,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="header_top" style="    background: #fff;
-    padding: 14px;
-    margin-bottom: 14px;
-    border-radius: 2px;">
-                <p style="
-    text-align: center;
-  
-   ">New Zealand Trade and Enterprise (NZTE) vetted Beachheads advisors are a network of private sector experts who offer perspective and insights to help customers shape the direction of their business in exports and local knowledge.</p>
-                <p style="
-    text-align: center;
-  
-    ">Located throughout New Zealand and around the world, the Beachheads advisors have experience in running international businesses and can help you with specific challenges and maximise opportunities.</p>
-
-
+        <div class="col-12">
+        <div class="card border-0 shadow-sm mb-3 mb-lg-4">
+            <div class="card-body text-center">
+                <div class="d-lg-flex">
+                    <div class="text-center pr-lg-4 pb-4 pb-lg-0">
+                        <img src="{{url('public')}}/static/logo.png" class="img-fluid" style="height: 130px;min-width: 130px;">
+                    </div>
+                    <div class="ml-auto">
+                        <p>New Zealand Trade and Enterprise (NZTE) vetted Beachheads advisors are a network of private sector experts who offer perspective and insights to help customers shape the direction of their business in exports and local knowledge.
+                        </p>
+                        <p>
+                        Located throughout New Zealand and around the world, the Beachheads advisors have experience in running international businesses and can help you with specific challenges and maximise opportunities.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -28,8 +29,8 @@
         <div class="col-12 col-lg-8">
         <!-- Search form -->
             <div class="card border-0 shadow pt-4">
-            <div class="card-header border-0 bg-white text-center">
-            <h2>Contact your sales team</h2>
+            <div class="card-header border-bottom bg-white text-center px-lg-4 pb-4">
+            <h4>Browse the global network of Beachheads advisors by filling in your requirements in the search bar.  </h4>
             </div>
                 <div class="card-body px-4 py-4 pb-lg-5">
                     <form action="{{route('result')}}" method="post">
@@ -212,7 +213,7 @@
                     <div class="d-flex">
                         <div><img src="{{url('public')}}/static/cropped-Tiger-logo.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
-                            <a target="_blank" href="" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
+                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
                         </div>
                     </div>
                 </div>
@@ -223,22 +224,24 @@
                     <div class="d-flex">
                         <div><img src="{{url('public')}}/static/sspng.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
-                            <a target="_blank" href="" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
+                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card border-0 shadow mb-4">
-                <div class="card-body">
-                    <p class="mb-4">Not sure of what online media to allocate your limited budget resources for the biggest impact? Let us help you get the most optimum reach for your budget.</p>
-                    <div class="d-flex">
-                        <div><img src="{{url('public')}}/static/ss.jpg" class="img-fluid"></div>
-                        <div class="ml-auto pt-5">
-                            <a target="_blank" href="https://www.webcloudex.com/" class="btn shadow-none text-white"><b>VISIT US NOW</b></a>
-                        </div>
+
+
+            <div class="card border-0 shadow mb-4 p-0" id="cloudex-card"> 
+                <img src="{{url('public')}}/static/web_cloudex.gif" class="card-img w-100 h-100">
+                <div class="card-img-overlay p-0">
+                    <div class="my-bg p-3">
+                        <h5 class="card-title text-white mb-0">Make your website more than faster</h5>
+                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
                     </div>
                 </div>
             </div>
+
+
             <div class="card border-0 shdow-none mt-lg-5" style="background: none;">
                 <p><span class="text-muted">Development By</span>
                     <a target="_blank" href="https://www.webcloudex.com/" style="text-decoration: none;">Web Cloudex</a></p>
@@ -264,9 +267,27 @@
         if($('#advisor').val() == 'overseas'){
             advisor = "overseas";
             $("#overseas_city").show();
+            $('#adv_exp_1').empty();
+            $('#adv_exp_2').empty();
+            $('#adv_exp_3').empty();
+            $('#market_exp_1').empty();
+            $('#market_exp_2').empty();
+            $('#market_exp_3').empty();
+            $('#sector_exp_1').empty();
+            $('#sector_exp_2').empty();
+            $('#sector_exp_3').empty();
         }else{
             advisor = "nz";
             $("#overseas_city").hide(); 
+            $('#adv_exp_1').empty();
+            $('#adv_exp_2').empty();
+            $('#adv_exp_3').empty();
+            $('#market_exp_1').empty();
+            $('#market_exp_2').empty();
+            $('#market_exp_3').empty();
+            $('#sector_exp_1').empty();
+            $('#sector_exp_2').empty();
+            $('#sector_exp_3').empty();
         }
     });
 
@@ -280,7 +301,7 @@
             success : function(response) {
                 $('#region').empty();
                 $('#region').append(' <option selected disabled value="">Select a City</option>');
-                $.each(response, function (index, value) {
+                $.each(response[0], function (index, value) {
                     $('#region').append('<option value="' + value.city + '">' + value.city + '</option>');
                 });
             }
@@ -298,410 +319,175 @@
             url:"{{route('region')}}",
             data: exp,
             success : function(response) {
-                $('#region').empty();
-                $('#region').append(' <option selected disabled value="">Select a City</option>');
-                $.each(response, function (index, value) {
-                    $('#region').append('<option value="' + value.city + '">' + value.city + '</option>');
-                });
+                if(response[1] == "overseas"){
+                    $('#region').empty();
+                    $('#region').append(' <option selected disabled value="">Select a Region</option>');
+                    $.each(response[0], function (index, value) {
+                        $('#region').append('<option value="' + value.region + '">' + value.region + '</option>');
+                    });
+                }
+                if(response[1] == "nz"){
+                    $('#region').empty();
+                    $('#region').append(' <option selected disabled value="">Select a City</option>');
+                    $.each(response[0], function (index, value) {
+                        $('#region').append('<option value="' + value.city + '">' + value.city + '</option>');
+                    });
+                }
             }
         });
     });
 
+
+
+
+
     $('#region').change(function(){
         if(advisor == 'nz'){
             var data = {
-                region: 'nz'
+                advisor: 'nz',
+                city: $('#region').val()
             }
-            console.log(data);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{csrf_token()}}'
+                },
+                type : 'POST',
+                url:"{{route('exporoverseas')}}",
+                data: data,
+                success : function(response) {
+                    
+
+                    // Adv Exp
+                    $('#adv_exp_1').append(' <option selected disabled value="">--Select--</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
+                    });
+                    $('#adv_exp_2').append(' <option selected disabled value="">--Select--</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
+                    });
+                    $('#adv_exp_3').append(' <option selected disabled value="">--Select--</option>');
+                    $.each(response, function (index, value) {
+                        $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
+                    });
+
+                     // Market Exp
+                    $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
+                    });
+                    $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
+                    });
+                    $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
+                    });
+
+                    // Sector Exp
+                    $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
+                    });
+                    $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
+                    });
+                    $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                    $.each(response, function (index, value) {
+                        $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
+                    });
+                    // exp_year
+                    $.each(response, function (index, value) {
+                        $('#exp_year').append('<option value="' + value.years_of_experience + '">' + value.years_of_experience + ' ' + 'Years' + '</option>');
+                    });
+                }
+            });
         }else{
             var data = {
-                region: $('#region').val()
+                region: $('#region').val(),
             }
-            console.log(data);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{csrf_token()}}'
+                },
+                type : 'POST',
+                url:"{{route('exporoverseas')}}",
+                data: data,
+                success : function(response) {
+                    $('#ov_city').empty();
+                    $('#ov_city').append(' <option selected disabled value="">--Select--</option>');
+                    $.each(response, function (index, value) {
+                        $('#ov_city').append('<option value="' + value.city + '">' + value.city + '</option>');
+                    });
+                }
+            });
         }
     });
 
+    $('#ov_city').change(function(){
+        var data = {
+            region: $('#region').val(),  
+            city: $('#ov_city').val()  
+        }
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': '{{csrf_token()}}'
+            },
+            type : 'POST',
+            url:"{{route('onlyovdata')}}",
+            data: data,
+            success : function(response) {
+            
+                // Adv Exp
+                $('#adv_exp_1').append(' <option selected disabled value="">--Select--</option>');
+                $.each(response, function (index, value) {
+                    $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
+                });
+                $('#adv_exp_2').append(' <option selected disabled value="">--Select--</option>');
+                $.each(response, function (index, value) {
+                    $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
+                });
+                $('#adv_exp_3').append(' <option selected disabled value="">--Select--</option>');
+                $.each(response, function (index, value) {
+                    $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
+                });
 
+                     // Market Exp
+                $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
+                });
+                $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
+                });
+                $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
+                });
 
-
-
-
-
-
-        // // NZ Adv Exp 1 data
-        // $('#region').change(function(){
-        //     var exp1Data = {
-        //         city: $('#region').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp1Data,
-        //         url:"{{route('region.nz.adv.exp1')}}",
-        //         success : function(response) {
-        //             $('#adv_exp_1').empty();
-        //             $('#adv_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
-        //             });
-                   
-        //         }
-        //     });
-        // });
-        // // NZ Adv Exp 2 data
-        // $('#adv_exp_1').change(function(){
-        //     var exp2Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp2Data,
-        //         url:"{{route('region.nz.adv.exp2')}}",
-        //         success : function(response) {
-        //             $('#adv_exp_2').empty();
-        //             $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-        // // NZ Adv Exp 3 data
-        // $('#adv_exp_2').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.adv.exp3')}}",
-        //         success : function(response) {
-        //             $('#adv_exp_3').empty();
-        //             $('#adv_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Market Exp 1 data
-        // $('#adv_exp_3').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.mrkt.exp1')}}",
-        //         success : function(response) {
-        //             $('#market_exp_1').empty();
-        //             $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#market_exp_1').append('<option value="' + value.mrkets_1+ '">' + value.mrkets_1 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Market Exp 2 data
-        // $('#market_exp_1').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.mrkt.exp2')}}",
-        //         success : function(response) {
-        //             $('#market_exp_2').empty();
-        //             $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#market_exp_2').append('<option value="' + value.mrkets_2+ '">' + value.mrkets_2 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Market Exp 3 data
-        // $('#market_exp_2').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val(),
-        //         mrktExp2: $('#market_exp_2').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.mrkt.exp3')}}",
-        //         success : function(response) {
-        //             $('#market_exp_3').empty();
-        //             $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#market_exp_3').append('<option value="' + value.mrkets_3+ '">' + value.mrkets_3 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Sector Exp 1 data
-        // $('#market_exp_3').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val(),
-        //         mrktExp2: $('#market_exp_2').val(),
-        //         mrktExp3: $('#market_exp_3').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.sector.exp1')}}",
-        //         success : function(response) {
-        //             $('#sector_exp_1').empty();
-        //             $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#sector_exp_1').append('<option value="' + value.sector_1+ '">' + value.sector_1 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Sector Exp 2 data
-        // $('#sector_exp_1').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val(),
-        //         mrktExp2: $('#market_exp_2').val(),
-        //         mrktExp3: $('#market_exp_3').val(),
-        //         secExp1: $('#sector_exp_1').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.sector.exp2')}}",
-        //         success : function(response) {
-        //             $('#sector_exp_2').empty();
-        //             $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#sector_exp_2').append('<option value="' + value.sector_2+ '">' + value.sector_2 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Sector Exp 3 data
-        // $('#sector_exp_2').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val(),
-        //         mrktExp2: $('#market_exp_2').val(),
-        //         mrktExp3: $('#market_exp_3').val(),
-        //         secExp1: $('#sector_exp_1').val(),
-        //         secExp2: $('#sector_exp_2').val(),
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.sector.exp3')}}",
-        //         success : function(response) {
-        //             $('#sector_exp_3').empty();
-        //             $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#sector_exp_3').append('<option value="' + value.sector_3+ '">' + value.sector_3 + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-        // // NZ Exp year
-        // $('#sector_exp_3').change(function(){
-        //     var exp3Data = {
-        //         city: $('#region').val(),
-        //         advExp1: $('#adv_exp_1').val(),
-        //         advExp2: $('#adv_exp_2').val(),
-        //         advExp3: $('#adv_exp_3').val(),
-        //         mrktExp1: $('#market_exp_1').val(),
-        //         mrktExp2: $('#market_exp_2').val(),
-        //         mrktExp3: $('#market_exp_3').val(),
-        //         secExp1: $('#sector_exp_1').val(),
-        //         secExp2: $('#sector_exp_2').val(),
-        //         secExp3: $('#sector_exp_3').val()
-        //     }
-        //     $.ajax({
-        //         headers: {
-        //             'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //         },
-        //         type : 'POST',
-        //         data: exp3Data,
-        //         url:"{{route('region.nz.exp.year')}}",
-        //         success : function(response) {
-        //             $('#exp_year').empty();
-        //             $('#exp_year').append(' <option selected disabled value="no">N/A</option>');
-        //             $.each(response, function (index, value) {
-        //                 $('#exp_year').append('<option value="' + value.years_of_experience+ '">' + value.years_of_experience + '</option>');
-        //             });
-        //         }
-        //     });
-        // });
-
-
-        // $('#advisor').change(function(){
-        //     // Overseas City
-        //     if($('#advisor').val() == 'overseas'){
-        //         $('#region').empty();
-        //         $('#ov_city').empty();
-        //         $('#adv_exp_1').empty();
-        //         $('#adv_exp_2').empty();
-        //         $('#adv_exp_3').empty();
-        //         $('#market_exp_1').empty();
-        //         $('#market_exp_2').empty();
-        //         $('#market_exp_3').empty();
-        //         $('#sector_exp_1').empty();
-        //         $('#sector_exp_2').empty();
-        //         $('#sector_exp_3').empty();
-        //         $("#overseas_city").show();
-        //         $.ajax({
-        //             headers: {
-        //                 'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //             },
-        //             type : 'POST',
-        //             url:"{{route('region.overseas')}}",
-        //             success : function(response) {
-        //                 $('#region').empty();
-        //                 $('#region').append(' <option selected disabled value="">Select a Region</option>');
-        //                 $.each(response, function (index, value) {
-        //                     $('#region').append('<option value="' + value.region + '">' + value.region + '</option>');
-        //                 });
-        //             }
-        //         });
-
-        //         // OV City
-        //         $('#region').change(function(){
-        //             var exp = {
-        //                 region: $('#region').val()
-        //             }
-        //             $.ajax({
-        //                 headers: {
-        //                     'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //                 },
-        //                 type : 'POST',
-        //                 data: exp,
-        //                 url:"{{route('overseas.city')}}",
-        //                 success : function(response) {
-        //                     $('#ov_city').empty();
-        //                     $('#ov_city').append(' <option selected disabled value="">Select a City</option>');
-        //                     $.each(response, function (index, value) {
-        //                         $('#ov_city').append('<option value="' + value.city + '">' + value.city + '</option>');
-        //                     });
-        //                 }
-        //             });
-        //         });
-
-        //         // OV Exp 1
-        //         $('#ov_city').change(function(){
-        //             var exp = {
-        //                 region: $('#region').val(),
-        //                 city: $('#ov_city').val()
-        //             }
-        //             $.ajax({
-        //                 headers: {
-        //                     'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //                 },
-        //                 type : 'POST',
-        //                 data: exp,
-        //                 url:"{{route('region.ov.adv.exp1')}}",
-        //                 success : function(response) {
-        //                     $('#adv_exp_1').empty();
-        //                     $('#adv_exp_1').append(' <option selected disabled value="">--Select--</option>');
-        //                     $.each(response, function (index, value) {
-        //                         $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
-        //                     });
-        //                 }
-        //             });
-        //         });
-
-        //         // OV Exp 2
-        //         $('#adv_exp_1').change(function(){
-        //             alert('OK');
-        //             // var exp2Data = {
-        //             //     region: $('#region').val(),
-        //             //     city: $('#ov_city').val(),
-        //             //     advExp1: $('#adv_exp_1').val()
-        //             // }
-        //             // $.ajax({
-        //             //     headers: {
-        //             //         'X-CSRF-TOKEN': '{{csrf_token()}}'
-        //             //     },
-        //             //     type : 'POST',
-        //             //     data: exp2Data,
-        //             //     url:"{{route('region.nz.adv.exp2')}}",
-        //             //     success : function(response) {
-        //             //         $('#adv_exp_2').empty();
-        //             //         $('#adv_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-        //             //         $.each(response, function (index, value) {
-        //             //             $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
-        //             //         });
-        //             //     }
-        //             // });
-        //         });
-    
-
-
-
-        //     }else{
-        //         $("#overseas_city").hide();
-        //     }
-        // });
-
-
+                    // Sector Exp
+                $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
+                });
+                $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
+                });
+                $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
+                $.each(response, function (index, value) {
+                    $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
+                });
+                // exp_year
+                $.each(response, function (index, value) {
+                    $('#exp_year').append('<option value="' + value.years_of_experience + '">' + value.years_of_experience + ' ' + 'Years' + '</option>');
+                });
+            }
+        });
+    })
 
  
 </script>
