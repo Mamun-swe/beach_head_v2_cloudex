@@ -1,6 +1,192 @@
 @extends('layouts.website')
 @section('content')
+<style>
+.content {
+    position: absolute;
+    height: 30px;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+}
 
+.content__container__text {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+
+.content__container__list {
+    margin-top: -7px;
+    padding-left: 140px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.content__container__list__item {
+    line-height: 40px;
+    margin: 0;
+}
+
+@-webkit-keyframes opacity {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes change {
+    0%,
+    12.66%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
+}
+
+@-o-keyframes opacity {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes change {
+    0%,
+    12.66%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
+}
+
+@-moz-keyframes opacity {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes change {
+    0%,
+    12.66%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
+}
+
+@keyframes opacity {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes change {
+    0%,
+    12.66%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
+}
+</style>
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -231,12 +417,22 @@
             </div>
 
 
+
             <div class="card border-0 shadow mb-4 p-0" id="cloudex-card"> 
                 <img src="{{url('public')}}/static/web_cloudex.gif" class="card-img w-100 h-100">
                 <div class="card-img-overlay p-0">
                     <div class="my-bg p-3">
-                        <h5 class="card-title text-white mb-0">Make your website more than faster</h5>
-                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
+                    <div class="content">
+                            <h4 class="content__container__text text-white">We are doing</h4>
+                            <ul class="content__container__list">
+                                <li class="content__container__list__item"> Web Development</li>
+                                <li class="content__container__list__item">bob !</li>
+                                <li class="content__container__list__item">users !</li>
+                                <li class="content__container__list__item">everybody !</li>
+                            </ul>
+                      
+                    </div>
+                        <a target="_blank" href="" class="btn text-primary bg-white shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 13px;"><b>VISIT US</b></a>
                     </div>
                 </div>
             </div>

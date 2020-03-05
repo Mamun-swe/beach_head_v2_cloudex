@@ -65,18 +65,12 @@ class SiteController extends Controller
                 ->where('city', $request->city)
                 ->get();
             $collection = collect($datax);
-            $data = $collection->unique([
-                    'advisory_exp_1',
-                    'advisory_exp_2',
-                    'advisory_exp_3',
-                    'mrkets_1',
-                    'mrkets_2',
-                    'mrkets_3',
-                    'sector_1',
-                    'sector_2',
-                    'sector_3',
-                    'years_of_experience'
-            ]);
+            $data = $collection->unique(
+                'mrkets_1',
+                'mrkets_2',
+                'mrkets_3',
+                'years_of_experience'
+            );
             $data->values()->all();
             if($data){
                 return response()->json($data);
@@ -116,18 +110,12 @@ class SiteController extends Controller
             ->where('city', $request->city)
             ->get();
             $collection = collect($ovData);
-            $data = $collection->unique([
-                'advisory_exp_1',
-                'advisory_exp_2',
-                'advisory_exp_3',
+            $data = $collection->unique(
                 'mrkets_1',
                 'mrkets_2',
                 'mrkets_3',
-                'sector_1',
-                'sector_2',
-                'sector_3',
                 'years_of_experience'
-            ]);
+            );
             $data->values()->all();
             if($data){
                 return response()->json($data);
