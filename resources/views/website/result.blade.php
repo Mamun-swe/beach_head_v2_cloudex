@@ -14,7 +14,7 @@
                     <div class="row">
 
                         <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                            <p class="text-muted mb-3">NPS for your Region Beach Head Advisor</p>
+                            <p class="text-muted mb-3 text-center"><b>NPS for your Region Beach Head Advisor</b></p>
                             @foreach ($data as $item)
 							@if($item == $data->first())
                                 <h5 class="mb-3 border text-capitalize text-center py-2" id="region" data-columns="{{$item->region}}">{{$item->region}}</h5>
@@ -24,16 +24,16 @@
                             
                         </div>
 
-                        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pt-lg-5">
-                            <p class="text-muted mb-3">NPS Score for this Region last 3 yrs</p>
-                            <p class="text-muted mt-lg-4">Number of times Advisor Used Last 3 yrs</p>
+                        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pt-lg-4 mt-lg-3">
+                            <p class="text-muted mb-3"><b>NPS Score for this Region last 3 yrs</b></p>
+                            <p class="text-muted mt-lg-4"><b>Number of times Advisor Used Last 3 yrs</b></p>
                         </div>
 
                         <div class="col-12 col-lg-4 mb-4 mb-lg-0">
                             <table class="table-one">
-                                <thead id="thead">
+                                <thead class="text-center" id="thead">
                                 </thead>
-                                <tbody id="tbody">
+                                <tbody class="text-center" id="tbody">
                                 </tbody>
                             </table>
                         </div>
@@ -50,7 +50,7 @@
 
                     <div class="row mb-4">
                         <div class="col-12 col-lg-4 mb-0">
-                            <p class="text-muted mb-2">Beach Head Advisor Location</p>
+                            <p class="text-muted mb-2 text-center"><b>Beach Head Advisor Location</b></p>
                             @foreach ($data as $item)
 							@if($item == $data->first())
                                 <h5 class="mb-3 border text-capitalize text-center py-2">{{$item->city}}</h5>
@@ -59,7 +59,7 @@
                             
                         </div>
                         <div class="col-12 col-lg-4 mb-4">
-                            <p class="text-muted mb-2">Beach Head Advisor Region</p>
+                            <p class="text-muted mb-2 text-center"><b>Beach Head Advisor Region</b></p>
                             @foreach ($data as $item)
 							@if($item == $data->first())
                                 <h5 class="mb-3 border text-capitalize text-center py-2">{{$item->region}}</h5>
