@@ -18,8 +18,8 @@
 }
 
 .content__container__list {
-    margin-top: -7px;
-    padding-left: 140px;
+    margin-top: -9px;
+    padding-left: 120px;
     text-align: left;
     list-style: none;
     -webkit-animation-name: change;
@@ -386,6 +386,12 @@
                         </div>
                         <button type="submit" class="btn btn-info uniq-btn shadow-none text-white float-right px-5"><b>GET RESULT</b></button>
                     </form>
+          
+                <p>
+                    <span class="text-muted">Development By</span>
+                    <a target="_blank" href="https://www.webcloudex.com/" style="text-decoration: none;">Web Cloudex</a>
+                </p>
+   
                 </div>
             </div>
         </div>
@@ -423,12 +429,12 @@
                 <div class="card-img-overlay p-0">
                     <div class="my-bg p-3">
                     <div class="content">
-                            <h4 class="content__container__text text-white">We are doing</h4>
+                            <h5 class="content__container__text text-white">We are doing</h5>
                             <ul class="content__container__list">
                                 <li class="content__container__list__item"> Web Development</li>
-                                <li class="content__container__list__item">bob !</li>
-                                <li class="content__container__list__item">users !</li>
-                                <li class="content__container__list__item">everybody !</li>
+                                <li class="content__container__list__item"> Web Design</li>
+                                <li class="content__container__list__item"> Speed Optimization</li>
+                                <li class="content__container__list__item"> Software Development</li>
                             </ul>
                       
                     </div>
@@ -437,11 +443,6 @@
                 </div>
             </div>
 
-
-            <div class="card border-0 shdow-none mt-lg-5" style="background: none;">
-                <p><span class="text-muted">Development By</span>
-                    <a target="_blank" href="https://www.webcloudex.com/" style="text-decoration: none;">Web Cloudex</a></p>
-            </div>
         </div>
     </div>
 </div>
@@ -464,45 +465,45 @@
                             <div class="row">
                                 <div class="col-12 col-lg-4">
                                     <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated fadeInDownBig slow">
-                                    <div class="my-3 animated fadeInRightBig slow">
+                                    <div class="my-3 animated fadeInRightBig slow text-center mt-lg-5">
                                         <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
                                         <p>www.nzteadvisors.com</p>        
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-8 text-column p-3">
+                                <div class="col-12 col-lg-8 text-column column-one p-3">
                                     <div class="p-3">
                                         <div class="animated fadeInLeftBig slow">
                                             <p class="mb-0 bold-text"><b>English</b></p>
-                                            <p>“It’s raining cats and dogs”</p>
+                                            <p class="small-text">“It’s raining cats and dogs”</p>
                                         </div>
                                     
                                         <div class="animated fadeInLeftBig slow">
                                             <p class="mb-0 bold-text"><b>Spanish</b></p>
-                                            <p>It’s raining dung head-first.</br>
+                                            <p class="small-text">It’s raining dung head-first.</br>
                                             “Esta lloviendo caen soretes de punta.”</p>
                                         </div>
                                     
                                         <div class="animated fadeInLeftBig slow">
                                             <p class="mb-0 bold-text"><b>Afrikaans</b></p>
-                                            <p>It’s raining old women with clubs.</br> 
+                                            <p class="small-text">It’s raining old women with clubs.</br> 
                                             “Ou vrouens met knopkieries reen.”</p>
                                         </div>
 
                                         <div class="animated fadeInLeftBig slow">
                                             <p class="mb-0 bold-text"><b>German</b></p>
-                                            <p>It’s raining/pouring shoemakers. </br>
+                                            <p class="small-text">It’s raining/pouring shoemakers. </br>
                                             “Es regnet/gießt Schusterjungs.”</p>
                                         </div>
                                     
                                         <div class="animated fadeInLeftBig slow">
-                                            <p class="mb-0"><b>Greek</b></p>
-                                            <p>It’s raining chair legs. <br>
+                                            <p class="mb-0 bold-text"><b>Greek</b></p>
+                                            <p class="small-text">It’s raining chair legs. <br>
                                             “Rixnei kareklopodara.”</p>
                                         </div>
 
                                         <div class="animated fadeInLeftBig slow">
-                                            <p class="mb-0"><b>Norwegian</b></p>
-                                            <p class="mb-2">It’s raining female trolls. <br>
+                                            <p class="mb-0 bold-text"><b>Norwegian</b></p>
+                                            <p class="small-text">It’s raining female trolls. <br>
                                             “Det regner trollkjerringer.”</p>
                                         </div>
                                         <div class="text-right pr-3">
@@ -516,7 +517,7 @@
                             <div class="row">
                                 <div class="col-12 col-lg-4">
                                     <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated slow fadeInDownBig">
-                                    <div class="my-3 animated fadeInLeftBig slow">
+                                    <div class="my-3 animated fadeInLeftBig slow text-center mt-lg-5">
                                         <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
                                         <p>www.nzteadvisors.com</p>        
                                     </div>
@@ -538,8 +539,12 @@
                                             <img src="{{url('public')}}/slider/slider5.png" class="img-fluid animated slow fadeInUpBig">
                                         </div>
                                     </div>
-                                    
-                                        
+
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <h5 class="mb-0">The languagenerds.com</h5>
+                                        </div>
+                                    </div>
                                     
                                 </div>
                             </div>
@@ -548,48 +553,78 @@
                             <div class="row">
                                 <div class="col-12 col-lg-4">
                                     <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated slow fadeInDownBig">
-                                    <div class="my-3 animated fadeInLeftBig slow">
+                                    <div class="my-3 animated fadeInLeftBig slow text-center mt-lg-5">
                                         <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
                                         <p>www.nzteadvisors.com</p>        
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-8">
+                                <div class="col-12 col-lg-8 column-three">
 
                                     <div class="row">
-                                        <div class="col-6 p-3 animated slow fadeInDownBig">
-                                            <div class="text-column p-4">
-                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
+                                        <div class="col-6 p-1 animated slow fadeInDownBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">AIN HTAUNG // HOUSE PRISON <br>
                                                 Meaning: Marriage <br>
                                                 Language: Burmese
                                             </h5>
                                             </div>
                                         </div>
-                                        <div class="col-6 p-3 animated slow fadeInRightBig">
-                                            <div class="text-column p-4">
-                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
-                                                Meaning: Marriage <br>
-                                                Language: Burmese
+                                        <div class="col-6 p-1 animated slow fadeInRightBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">
+                                                JOULUPUKKI // CHRISTMAS GOAT<br>
+                                                Meaning: Santa Claus<br>
+                                                Language: Finnish
                                             </h5>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-6 p-3 animated slow fadeInLeftBig">
-                                            <div class="text-column p-4">
-                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
-                                                Meaning: Marriage <br>
-                                                Language: Burmese
+                                        <div class="col-6 p-1 animated slow fadeInLeftBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">
+                                            SURTAN ALBAHR // CANCER OF THE SEA <br>
+                                            Meaning: Lobster <br>
+                                            Language: Arabic
                                             </h5>
                                             </div>
                                         </div>
-                                        <div class="col-6 p-3 animated slow fadeInUpBig">
-                                            <div class="text-column p-4">
-                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
-                                                Meaning: Marriage <br>
-                                                Language: Burmese
+                                        <div class="col-6 p-1 animated slow fadeInRightBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">
+                                                SYUT GWAIH // SNOW CUPBOARD <br>
+                                                Meaning: Refrigerator <br>
+                                                Language: Chinese (Cantonese)
                                             </h5>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6 p-1 animated slow fadeInUpBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">
+                                                STROZZAPRETI // PRIEST STRANGLER <br>
+                                                Meaning: A kind of pasta <br>
+                                                Language: Italian
+                                            </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-1 animated slow fadeInDownBig">
+                                            <div class="text-column px-4 py-5">
+                                            <h5 class="mb-0 text-white">
+                                                CHUỘT TÚI// RAT POCKET <br>
+                                                Meaning: Kangaroo <br>
+                                                Language: Vietnamese
+                                            </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <h5 class="mb-0">Metalfloss.com</h5>
                                         </div>
                                     </div>
 

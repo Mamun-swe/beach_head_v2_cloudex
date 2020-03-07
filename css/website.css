@@ -172,8 +172,24 @@
     }
     
     .custom-modal .card .text-column {
-        background: #007bffb0;
+        background: #066cdae1;
         overflow: hidden;
+    }
+    
+    .custom-modal .card .column-one .bold-text {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    
+    .custom-modal .card .column-one .small-text {
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    
+    .custom-modal .column-three .text-column {
+        min-height: 180px;
     }
     
     @media(min-width: 992px) {
