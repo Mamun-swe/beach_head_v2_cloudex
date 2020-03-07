@@ -448,9 +448,168 @@
 
 
 <!-- Widge code -->
-<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kurien75"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:19px !important;">Buy me a coffee</span></a>
+<!-- <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kurien75"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:19px !important;">Buy me a coffee</span></a> -->
+
+<!-- Custom Modal -->
+<div class="custom-modal">
+    <div class="close-section text-right">
+        <i class="fas fa-times text-white" id="closeModal"></i>
+    </div>
+    <div class="flex-center flex-column">
+        <div class="card border-0 rounded-0">
+            <div class="card-body">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated fadeInDownBig slow">
+                                    <div class="my-3 animated fadeInRightBig slow">
+                                        <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
+                                        <p>www.nzteadvisors.com</p>        
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 text-column p-3">
+                                    <div class="p-3">
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0 bold-text"><b>English</b></p>
+                                            <p>“It’s raining cats and dogs”</p>
+                                        </div>
+                                    
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0 bold-text"><b>Spanish</b></p>
+                                            <p>It’s raining dung head-first.</br>
+                                            “Esta lloviendo caen soretes de punta.”</p>
+                                        </div>
+                                    
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0 bold-text"><b>Afrikaans</b></p>
+                                            <p>It’s raining old women with clubs.</br> 
+                                            “Ou vrouens met knopkieries reen.”</p>
+                                        </div>
+
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0 bold-text"><b>German</b></p>
+                                            <p>It’s raining/pouring shoemakers. </br>
+                                            “Es regnet/gießt Schusterjungs.”</p>
+                                        </div>
+                                    
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0"><b>Greek</b></p>
+                                            <p>It’s raining chair legs. <br>
+                                            “Rixnei kareklopodara.”</p>
+                                        </div>
+
+                                        <div class="animated fadeInLeftBig slow">
+                                            <p class="mb-0"><b>Norwegian</b></p>
+                                            <p class="mb-2">It’s raining female trolls. <br>
+                                            “Det regner trollkjerringer.”</p>
+                                        </div>
+                                        <div class="text-right pr-3">
+                                            <small class="animated fadeInRightBig slow">Thelanguagenerds.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated slow fadeInDownBig">
+                                    <div class="my-3 animated fadeInLeftBig slow">
+                                        <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
+                                        <p>www.nzteadvisors.com</p>        
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-6 p-1">
+                                            <img src="{{url('public')}}/slider/slider2.png" class="img-fluid animated slow fadeInDownBig">
+                                        </div>
+                                        <div class="col-6 p-1">
+                                            <img src="{{url('public')}}/slider/slider3.png" class="img-fluid animated slow fadeInRightBig">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 p-1">
+                                            <img src="{{url('public')}}/slider/slider4.png" class="img-fluid animated slow fadeInLeftBig">
+                                        </div>
+                                        <div class="col-6 p-1">
+                                            <img src="{{url('public')}}/slider/slider5.png" class="img-fluid animated slow fadeInUpBig">
+                                        </div>
+                                    </div>
+                                    
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <img src="{{url('public')}}/slider/slider1.jpg" class="img-fluid animated slow fadeInDownBig">
+                                    <div class="my-3 animated fadeInLeftBig slow">
+                                        <h5 class="text-dark"><b>Local input. Global intelligence.</b></h5>
+                                        <p>www.nzteadvisors.com</p>        
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8">
+
+                                    <div class="row">
+                                        <div class="col-6 p-3 animated slow fadeInDownBig">
+                                            <div class="text-column p-4">
+                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
+                                                Meaning: Marriage <br>
+                                                Language: Burmese
+                                            </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-3 animated slow fadeInRightBig">
+                                            <div class="text-column p-4">
+                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
+                                                Meaning: Marriage <br>
+                                                Language: Burmese
+                                            </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6 p-3 animated slow fadeInLeftBig">
+                                            <div class="text-column p-4">
+                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
+                                                Meaning: Marriage <br>
+                                                Language: Burmese
+                                            </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-3 animated slow fadeInUpBig">
+                                            <div class="text-column p-4">
+                                            <h5 class="mb-0">AIN HTAUNG // HOUSE PRISON <br>
+                                                Meaning: Marriage <br>
+                                                Language: Burmese
+                                            </h5>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <i class="fas fa-chevron-left text-dark fa-2x"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <i class="fas fa-chevron-right text-dark fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Custom Modal -->
 
 
 
@@ -687,5 +846,12 @@
 
  
 </script>
+<script>
+    console.log(window.scroll());
+    $('#closeModal').click(function(){
+        $('.custom-modal').fadeOut(800);
+    });
+</script>
+
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kurien75" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#5F7FFF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
 @endsection
