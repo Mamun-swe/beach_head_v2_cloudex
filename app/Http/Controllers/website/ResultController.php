@@ -104,7 +104,8 @@ class ResultController extends Controller
 
     // Select NPS
     public function selectNps(Request $request){
-        $data = nps::where('col_1',  'LIKE', "%$request->x%")->get();
+        $data = nps::where('col_1', 'LIKE', "%$request->x%")
+                    ->orWhere('col_1', 'Europe')->take(2)->get();
         return response()->json($data);
     }
     // NPS date

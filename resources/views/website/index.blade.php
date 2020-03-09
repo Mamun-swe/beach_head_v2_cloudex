@@ -405,7 +405,7 @@
                     <div class="d-flex">
                         <div><img src="{{url('public')}}/static/cropped-Tiger-logo.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
-                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
+                        <a target="_blank" href="https://www.viewpointb.com/" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
                         </div>
                     </div>
                 </div>
@@ -416,7 +416,7 @@
                     <div class="d-flex">
                         <div><img src="{{url('public')}}/static/sspng.png" class="img-fluid"></div>
                         <div class="ml-auto pt-5">
-                        <a target="_blank" href="" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
+                        <a target="_blank" href="https://datapickles.com/" class="btn shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 12px;"><b>VISIT US</b></a>
                         </div>
                     </div>
                 </div>
