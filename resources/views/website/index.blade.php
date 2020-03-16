@@ -438,7 +438,7 @@
                             </ul>
                       
                     </div>
-                        <a target="_blank" href="" class="btn text-primary bg-white shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 13px;"><b>VISIT US</b></a>
+                        <a target="_blank" href="https://webcloudex.com/" class="btn text-primary bg-white shadow-none text-white px-2 py-1" style="position:absolute;bottom:20px;right:20px;font-size: 13px;"><b>VISIT US</b></a>
                     </div>
                 </div>
             </div>
@@ -829,50 +829,52 @@
             url:"{{route('onlyovdata')}}",
             data: data,
             success : function(response) {
+
+                // console.log(response.adv_exp_1);
             
                 // Adv Exp
                 $('#adv_exp_1').append(' <option selected disabled value="">--Select--</option>');
-                $.each(response, function (index, value) {
+                $.each(response.adv_exp_1, function (index, value) {
                     $('#adv_exp_1').append('<option value="' + value.advisory_exp_1 + '">' + value.advisory_exp_1 + '</option>');
                 });
                 $('#adv_exp_2').append(' <option selected disabled value="">--Select--</option>');
-                $.each(response, function (index, value) {
+                $.each(response.adv_exp_2, function (index, value) {
                     $('#adv_exp_2').append('<option value="' + value.advisory_exp_2 + '">' + value.advisory_exp_2 + '</option>');
                 });
                 $('#adv_exp_3').append(' <option selected disabled value="">--Select--</option>');
-                $.each(response, function (index, value) {
+                $.each(response.adv_exp_3, function (index, value) {
                     $('#adv_exp_3').append('<option value="' + value.advisory_exp_3 + '">' + value.advisory_exp_3 + '</option>');
                 });
 
                      // Market Exp
                 $('#market_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.mrkt_exp_1, function (index, value) {
                     $('#market_exp_1').append('<option value="' + value.mrkets_1 + '">' + value.mrkets_1 + '</option>');
                 });
                 $('#market_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.mrkt_exp_2, function (index, value) {
                     $('#market_exp_2').append('<option value="' + value.mrkets_2 + '">' + value.mrkets_2 + '</option>');
                 });
                 $('#market_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.mrkt_exp_3, function (index, value) {
                     $('#market_exp_3').append('<option value="' + value.mrkets_3 + '">' + value.mrkets_3 + '</option>');
                 });
 
                     // Sector Exp
                 $('#sector_exp_1').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.sec_exp_1, function (index, value) {
                     $('#sector_exp_1').append('<option value="' + value.sector_1 + '">' + value.sector_1 + '</option>');
                 });
                 $('#sector_exp_2').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.sec_exp_2, function (index, value) {
                     $('#sector_exp_2').append('<option value="' + value.sector_2 + '">' + value.sector_2 + '</option>');
                 });
                 $('#sector_exp_3').append(' <option selected disabled value="">-- Select --</option>');
-                $.each(response, function (index, value) {
+                $.each(response.sec_exp_3, function (index, value) {
                     $('#sector_exp_3').append('<option value="' + value.sector_3 + '">' + value.sector_3 + '</option>');
                 });
                 // exp_year
-                $.each(response, function (index, value) {
+                $.each(response.year_exp, function (index, value) {
                     $('#exp_year').append('<option value="' + value.years_of_experience + '">' + value.years_of_experience + ' ' + 'Years' + '</option>');
                 });
             }
